@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "AccessMonitor",
+  "version": "1.0",
+  "description": "This extension validates the accessibility of the current page using the AccessMonitor, while enhancing the results page by adding filters.",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://accessmonitor.acessibilidade.gov.pt/results/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "css": [
+        "customStyles.css"
+      ]
+    }
+  ]
+}

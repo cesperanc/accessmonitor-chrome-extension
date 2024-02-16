@@ -1,0 +1,24 @@
+.custom-filter-buttons .buttons-container{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.custom-filter-buttons button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.custom-filter-buttons button:is(:hover, :focus) {
+  background-color: #f2f2f2;
+}
+.custom-filter-buttons button[aria-pressed="true"] {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
