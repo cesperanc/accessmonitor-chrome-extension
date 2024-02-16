@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
   "name": "AccessMonitor",
-  "version": "1.0",
-  "description": "This extension validates the accessibility of the current page using the AccessMonitor, while enhancing the results page by adding filters.",
+  "version": "1.1",
+  "description": "Validate the accessibility of the current page using AccessMonitor and enhance the AccessMonitor results page by the addition of filters.",
+  "homepage_url": "https://github.com/cesperanc/accessmonitor-chrome-extension",
+  "author": "Cláudio Esperança",
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
