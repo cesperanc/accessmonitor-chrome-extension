@@ -5,7 +5,7 @@
  */
 (() => {
     const onLoad = () => {
-        const resultsTableSelector = 'table.evaluation-table';
+        const resultsTableSelector = 'table.table_primary';
         const hook = (resultsTable)=>{
             if(!resultsTable) return; // If the table is not found, return
             let activeButton = "Prática para ver manualmente"; // Track active button
@@ -25,7 +25,7 @@
                 let filteredCount = 0;
 
                 Array.from(resultsTable.querySelectorAll('tbody>tr')).map(tr=>{
-                    const showAline = Array.from(tr.querySelectorAll('svg>title')).filter(title=>title.textContent.trim().toLowerCase()===nameNormalized).length>0;
+                    const showAline = Array.from(tr.querySelectorAll('.error-cell>.visually-hidden,.warning-cell>.visually-hidden,.success-cell>.visually-hidden')).filter(title=>title.textContent.trim().toLowerCase()===nameNormalized).length>0;
                     if(showAline || name==="" || !name){
                         tr.removeAttribute("hidden");
                         filteredCount++;
